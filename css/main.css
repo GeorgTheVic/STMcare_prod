@@ -351,6 +351,29 @@ a {
     display: none;
   }
 }
+.burger-close__line {
+  position: absolute;
+  top: 45%;
+  left: 12%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 25px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--color-light-1);
+}
+.burger-close__line:first-child {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.burger-close__line:last-child {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 
 .nav {
   display: -webkit-box;
