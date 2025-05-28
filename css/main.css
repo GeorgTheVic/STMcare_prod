@@ -467,7 +467,7 @@ a {
 
 .intro {
   height: 100vh;
-  background: url("/img/intro/intro-bg.jpg") center/cover no-repeat;
+  background: url("../img/intro/intro-bg.jpg") center/cover no-repeat;
 }
 @media (max-width: 576px) {
   .intro {
@@ -746,7 +746,7 @@ a {
 }
 .price__inner {
   padding: 35px 0 100px;
-  background: url("/img/price/price-bg.png") center/cover no-repeat;
+  background: url("../img/price/price-bg.png") center/cover no-repeat;
 }
 .price__old {
   position: relative;
@@ -867,7 +867,7 @@ a {
 }
 
 .footer {
-  background: url("/img/footer/footer-bg.jpg") center/cover no-repeat;
+  background: url("../img/footer/footer-bg.jpg") center/cover no-repeat;
 }
 .footer__inner {
   padding: 100px 0;
