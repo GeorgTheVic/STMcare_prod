@@ -10614,23 +10614,23 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper_course = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.course__swiper', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Mousewheel],
     slidesPerView: 1,
     spaceBetween: 10,
     breakpoints: {
       576: {
-        slidesPerView: 1,
-        spaceBetween: 20
+        slidesPerView: 1
+        // spaceBetween: 20,
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 40
+        slidesPerView: 2
+        // spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 50
+        slidesPerView: 3
+        // spaceBetween: 50,
       }
     },
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Mousewheel],
     loop: true,
     pagination: {
       el: '.swiper-pagination',
