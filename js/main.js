@@ -10560,9 +10560,11 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger.js */ "./src/js/components/burger.js");
-/* harmony import */ var _components_course_swiper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/course-swiper.js */ "./src/js/components/course-swiper.js");
-/* harmony import */ var _components_feedback_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/feedback-swiper.js */ "./src/js/components/feedback-swiper.js");
-/* harmony import */ var _components_video_button_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/video-button.js */ "./src/js/components/video-button.js");
+/* harmony import */ var _components_phone_number_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/phone_number.js */ "./src/js/components/phone_number.js");
+/* harmony import */ var _components_course_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/course-swiper.js */ "./src/js/components/course-swiper.js");
+/* harmony import */ var _components_feedback_swiper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/feedback-swiper.js */ "./src/js/components/feedback-swiper.js");
+/* harmony import */ var _components_video_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/video-button.js */ "./src/js/components/video-button.js");
+
 
 
 
@@ -10619,16 +10621,16 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 10,
     breakpoints: {
       576: {
-        slidesPerView: 1
-        // spaceBetween: 20,
+        slidesPerView: 1,
+        spaceBetween: 20
       },
       768: {
-        slidesPerView: 2
-        // spaceBetween: 40,
+        slidesPerView: 2,
+        spaceBetween: 40
       },
       1024: {
-        slidesPerView: 3
-        // spaceBetween: 50,
+        slidesPerView: 3,
+        spaceBetween: 50
       }
     },
     loop: true,
@@ -10659,6 +10661,36 @@ document.addEventListener('DOMContentLoaded', () => {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Mousewheel, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay],
     slidesPerView: 3,
     spaceBetween: 5
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/phone_number.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/phone_number.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const linksWhatsApp = document.querySelectorAll('.linkWhatsApp'),
+  phoneNumber = '77002299803';
+function clearHref(link) {
+  link.href = '';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  let lastClick = 0;
+  linksWhatsApp.forEach(link => {
+    link.addEventListener('click', () => {
+      const now = Date.now();
+      if (now - lastClick < 3000) {
+        clearHref(link);
+      } else {
+        lastClick = now;
+        link.href = `https://wa.me/${phoneNumber}?text=Здравствуйте,%20пишу%20с%20сайта%20STMcare.`;
+      }
+      setTimeout(clearHref, 1000, link);
+    });
   });
 });
 
