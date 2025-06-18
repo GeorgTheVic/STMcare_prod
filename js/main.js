@@ -10564,6 +10564,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_course_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/course-swiper.js */ "./src/js/components/course-swiper.js");
 /* harmony import */ var _components_feedback_swiper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/feedback-swiper.js */ "./src/js/components/feedback-swiper.js");
 /* harmony import */ var _components_video_button_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/video-button.js */ "./src/js/components/video-button.js");
+/* harmony import */ var _components_contacts_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/contacts.js */ "./src/js/components/contacts.js");
+
 
 
 
@@ -10600,6 +10602,46 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/burger.js */ "./src/js/functions/burger.js");
 
+
+/***/ }),
+
+/***/ "./src/js/components/contacts.js":
+/*!***************************************!*\
+  !*** ./src/js/components/contacts.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const footerMail = document.querySelector('.footer__mail'),
+  footerPhone = document.querySelector('.footer__phone'),
+  phoneNumber = 'tel:+77002299803',
+  mail = 'mailto:stmcare@gmail.com';
+function clearHref(link) {
+  link.href = '';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  let lastClick = 0;
+  footerMail.addEventListener('click', () => {
+    const now = Date.now();
+    if (now - lastClick < 3000) {
+      clearHref(footerMail);
+    } else {
+      lastClick = now;
+      footerMail.href = `${mail}`;
+    }
+    setTimeout(clearHref, 1000, footerMail);
+  });
+  footerPhone.addEventListener('click', () => {
+    const now = Date.now();
+    if (now - lastClick < 3000) {
+      clearHref(footerPhone);
+    } else {
+      lastClick = now;
+      footerPhone.href = `${phoneNumber}`;
+    }
+    setTimeout(clearHref, 1000, footerPhone);
+  });
+});
 
 /***/ }),
 
